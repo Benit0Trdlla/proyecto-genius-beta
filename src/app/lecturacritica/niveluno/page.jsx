@@ -19,11 +19,11 @@ export default async function NivelUnoPage({ searchParams }) {
     return (
         <>
             <Header titleSubject={"Lectura Crítica"} href={"/progress"} />
-            <Cronometro stateTimer={stateTimer} />
+            <Cronometro stateTimer={stateTimer} levelSubject={'LecturaCríticaNivelUno'} />
             <StructureActivities>
                 <ContentActivities>
                     <Enunciado Enunciado={pregunta.Enunciado} />
-                    <OpcionsAndAlerts totalPreguntas={totalPreguntas} justifyContent={pregunta.Explicación} numIndex={numIndex} correctAnswer={pregunta.Respuestas} opciones={[
+                    <OpcionsAndAlerts levelSubject={'LecturaCríticaNivelUno'}  totalPreguntas={totalPreguntas} justifyContent={pregunta.Explicación} numIndex={numIndex} correctAnswer={pregunta.Respuestas} opciones={[
                         { label: "A. " + pregunta.A, value: pregunta.A },
                         { label: "B. " + pregunta.B, value: pregunta.B },
                         { label: "C. " + pregunta.C, value: pregunta.C },
