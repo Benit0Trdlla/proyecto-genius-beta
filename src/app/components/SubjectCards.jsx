@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import BtnLevelProgress from './BtnLevelProgress';
 export default function SubjectCards({ SubjectInfo }) {
     return (
         <div className="card-group gap-2 py-3">
@@ -11,20 +11,7 @@ export default function SubjectCards({ SubjectInfo }) {
                     <a href={subject.href}>
                         <Image src={subject.image} width={400} height={400} className="card-img-top w-100 h-100" alt={`Imagen ${subject.tittle}`} priority />
                     </a>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <Link href={`${subject.href}/niveluno`} className="btn bg-transparent border-0">
-                            <Image src='/icons/unlocked.webp' width={25} height={25} className="card-img-top" alt="Imagen Nivel 1" />
-                        </Link>
-                        <Link href={`${subject.href}/niveldos`} className="btn  bg-transparent border-0">
-                            <Image src='/icons/locked.png' width={25} height={25} className="card-img-top" alt="Imagen Nivel 2" />
-                        </Link>
-                        <Link href={`${subject.href}/niveltres`} className="btn bg-transparent border-0">
-                            <Image src='/icons/locked.png' width={25} height={25} className="card-img-top" alt="Imagen Nivel 3" />
-                        </Link>
-                        <Link href={`${subject.href}/nivelcuatro`} className="btn bg-transparent border-0">
-                            <Image src='/icons/locked.png' width={25} height={25} className="card-img-top" alt="Imagen Nivel 4" />
-                        </Link>
-                    </div>
+                    <BtnLevelProgress levelSubject={subject.levelSubject} BtnHref={subject.href}/>
                 </div>
             ))}
             <style>

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 export default function Header({ titleSubject, MyImage, href }) {
     return (
         <>
@@ -12,9 +13,9 @@ export default function Header({ titleSubject, MyImage, href }) {
                             <Image src={MyImage} width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
                         )}
                         <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                                <a href={href} className="btn btn-warning">Volver</a>
-                            </li>
+                            <Link href={href} className="btn btn-warning">
+                                Volver
+                            </Link>
                         </ul>
                     </div>
                 </nav>

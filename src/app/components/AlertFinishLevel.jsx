@@ -4,7 +4,7 @@ import Link from 'next/link';
 import "/public/css/MyStyle/global.css";
 
 
-export default function AlertFinishLevel({ stateAlert, level }) {
+export default function AlertFinishLevel({ stateAlert, level, href }) {
     const [finishedLevel, setfinishedLevel] = useState(true);
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export default function AlertFinishLevel({ stateAlert, level }) {
                         <h4 className="alert-heading mb-3">{`¡Nivel ${level} Completado!`}</h4>
                         <img src="/Images/Donaciones.png" alt="Imagen de nivel completado" width={200} height={200} />
                         <hr />
-                        <Link href="/progress" className="btn btn-primary">
+                        <Link href={href} className="btn btn-primary">
                             Comienza el siguiente nivel aquí
                         </Link>
                     </div>
